@@ -51,6 +51,14 @@ createApp({
                 this.nextSlide();
             }, 2000)
         },
+        stopAutoPlay(){
+            clearInterval(this.autoPlay);
+        },
+        restartAutoplay(){
+            this.autoPlay = setInterval(()=> {
+                this.nextSlide();
+            }, 2000)
+        }, 
     },
     mounted(){
         this.autoPlay();
