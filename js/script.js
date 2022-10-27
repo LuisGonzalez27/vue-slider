@@ -45,7 +45,15 @@ createApp({
             if(this.activeIndex > this.giochiPc.length - 1){
                 this.activeIndex = 0
             }
-        }
-    }
+        },
+        autoPlay(){
+            this.autoPlay = setInterval(()=> {
+                this.nextSlide();
+            }, 2000)
+        },
+    },
+    mounted(){
+        this.autoPlay();
+    } 
     
 }).mount('#app');
