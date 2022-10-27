@@ -30,20 +30,20 @@ createApp({
     data(){
         return{
             activeIndex: 0,
-            slides: slides
+            giochiPc: slides
         }
     },
     methods:{
         prevSlide(){
-            this.activeIndex--
+            this.activeIndex--;
             if(this.activeIndex < 0){
-                this.activeIndex = this.slides.image.length -1
+                this.activeIndex = this.giochiPc.length - 1
             }
         },
         nextSlide(){
-            this.activeIndex++
-            if(this.activeIndex > this.slides.image.length -1){
-                this.activeIndex = 0;
+            this.activeIndex++;
+            if(this.activeIndex > this.giochiPc.length - 1){
+                this.activeIndex = 0
             }
         }
     }
